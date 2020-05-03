@@ -1,29 +1,26 @@
 {
   "env": {
     "browser": true,
-    "es6": true,
-    "node": true,
     "commonjs": true,
-    "jest": true
+    "es6": true,
+    "jest": true,
+    "node": true
   },
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
+  "globals": {},
   "parser": "/home/jacob/Code/eslint-comparison/node_modules/babel-eslint/lib/index.js",
   "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
-    },
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+    }
   },
   "plugins": [
     "react-hooks",
+    "react",
     "jsx-a11y",
     "flowtype",
-    "import",
-    "react"
+    "import"
   ],
   "rules": {
     "array-callback-return": [
