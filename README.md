@@ -1,2 +1,7 @@
-# eslint-comparison
-Comparison table for different eslint configurations
+# Eslint Comparison
+
+Comparison table for different eslint configurations.
+
+## Installation.
+
+- `npm i` to install dependencies.
