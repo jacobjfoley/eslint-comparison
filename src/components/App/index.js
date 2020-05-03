@@ -8,14 +8,14 @@ function App() {
   ));
 
   const cells = rules.ruleset.reduce((cells, rule) => {
-    const eslintRule = rules.eslintRules[rule] || "-";
-    const reactRule = rules.reactRules[rule] || "-";
-    const airbnbRule = rules.airbnbRules[rule] || "-";
+    const eslintRule = rules.eslintRules[rule]?.level || "-";
+    const reactRule = rules.reactRules[rule]?.level || "-";
+    const airbnbRule = rules.airbnbRules[rule]?.level || "-";
 
     cells.push(<div key={rule}>{rule}</div>);
-    cells.push(<div key={`${rule}-eslint`}>{eslintRule.level}</div>);
-    cells.push(<div key={`${rule}-react`}>{reactRule.level}</div>);
-    cells.push(<div key={`${rule}-airbnb`}>{airbnbRule.level}</div>);
+    cells.push(<div key={`${rule}-eslint`}>{eslintRule}</div>);
+    cells.push(<div key={`${rule}-react`}>{reactRule}</div>);
+    cells.push(<div key={`${rule}-airbnb`}>{airbnbRule}</div>);
 
     return cells;
   }, []);

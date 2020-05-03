@@ -4,7 +4,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: ["react-app", "plugin:react/recommended"],
+  extends: ["react-app"],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly",

@@ -6,6 +6,10 @@ const reactConfig = require("./react.json");
 function extractRules(config) {
   const rules = config.rules;
   return Object.keys(rules).reduce((keyMap, current) => {
+    if (rules[current][0] === "off") {
+      return keyMap;
+    }
+
     keyMap[current] = { id: current, level: rules[current][0] };
     return keyMap;
   }, {});
