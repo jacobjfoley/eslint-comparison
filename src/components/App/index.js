@@ -1,10 +1,12 @@
 import React from "react";
 import rules from "../../data";
-import "./App.css";
+import styles from "./App.module.css";
 
 function App() {
   const header = ["Rule", "React", "Eslint", "Airbnb"].map((text) => (
-    <div key={text}>{text}</div>
+    <div className={styles.header} key={text}>
+      {text}
+    </div>
   ));
 
   const cells = rules.ruleset.reduce((cells, rule) => {
@@ -21,8 +23,8 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      <div className="grid">
+    <div className={styles.app}>
+      <div className={styles.grid}>
         {header}
         {cells}
       </div>
